@@ -12,8 +12,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const route = require('./routers/router.js');
+const InsertRoute = require('./routers/InsertRouter.js');
 
 app.use('/',route);
+app.use('/insert',InsertRoute);
 
 
 app.use(function (req,res){
